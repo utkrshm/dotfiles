@@ -21,7 +21,10 @@ map("i", "<C-v>", '<C-r>+', { desc = "Works in Interactive mode; pastes from the
 
 map("v", "<C-x>", '"+d', { desc = "Works in Visual mode; cuts to the system clipboard" })
 
-vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
+-- If I want to map Ctrl+Backspace to delete word, I have to map the Esc-BS key to Ctrl+w because 
+-- I remap Ctrl+BS to Esc+BS for Emacs compatibility, to achieve the functionality in Ghostty ZSH
+vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true, silent = true })
+vim.keymap.set("n", "<M-BS>", "<C-w>", { noremap = true, silent = true })
 
 -- Use Shift + Arrow keys to move the selection
 map("n", "<S-Up>", "v<Up>")

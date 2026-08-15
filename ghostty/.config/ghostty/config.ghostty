@@ -14,8 +14,12 @@ cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
+# Adjust the size of the scrollback buffer (in bytes)
+scrollback-limit = 100000000
+
 # Keybindings
-keybind = ctrl+backspace=text:\x1b\x7f
+# keybind = ctrl+backspace=text:\x1b\x7f
+keybind = ctrl+backspace=text:\x17
 keybind = ctrl+w=unbind
 
 # Use Ctrl+Shift+(D/R) to create split panes

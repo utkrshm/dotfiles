@@ -156,3 +156,7 @@ source /usr/share/doc/fzf/examples/completion.zsh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/utkarsh/.local/bin:$PATH"

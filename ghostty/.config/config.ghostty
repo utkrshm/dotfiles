@@ -1,0 +1,31 @@
+# General behaviours
+# shell-integration = bash
+shell-integration = zsh
+copy-on-select = clipboard
+
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = notify
+
+# Appearance
+theme = Vercel
+font-family = JetBrainsMono Nerd Font
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# Adjust the size of the scrollback buffer (in bytes)
+scrollback-limit = 100000000
+
+# Keybindings
+keybind = ctrl+backspace=text:\x1b\x7f    # Maps C-BS to Esc-BS for Emacs compatibility in ZSH to delete a word
+keybind = ctrl+w=unbind
+
+# Use Ctrl+Shift+(D/R) to create split panes
+keybind = ctrl+shift+d=new_split:down
+keybind = ctrl+shift+r=new_split:right
+keybind = ctrl+shift+e=unbind
+keybind = ctrl+shift+o=unbind
+
+# These are the specific configuration files; will be loaded at the end of the current file, so please keep them at the end only.
+
