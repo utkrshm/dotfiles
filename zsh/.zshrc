@@ -90,11 +90,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -149,6 +149,15 @@ export NVM_DIR="$HOME/.nvm"
 alias y="yazi"
 alias oc="opencode"
 alias cc="claude"
+
+mkcd() {
+    if [[ $# -eq 0 ]]; then
+        echo "usage: mkcd <directory>"
+        return 1
+    fi
+
+    mkdir -p -- "$1" && cd -- "$1"
+}
 
 # Git aliases
 # coa = add all changes, and commit them
