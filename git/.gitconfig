@@ -1,0 +1,17 @@
+[user]
+    email = malaiya.utkarsh@gmail.com
+    name = Utkarsh Malaiya
+[init]
+    defaultBranch = master
+[credential]
+    username = utkrshm
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    cm = commit -m
+    lg = log --oneline --graph --decorate --all
+	
+    # Important, provide the git commit message along with this command
+    ac = "!git add -A && git commit -m"
+
