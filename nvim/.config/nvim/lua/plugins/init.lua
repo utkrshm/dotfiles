@@ -33,6 +33,22 @@ return {
     },
   },
 
+  -- Plugin for surrounding selected text in visual mode in pairs...
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        keymaps = {
+          visual = "S",
+          normal = "ys",
+          delete = "ds",
+          change = "cs",
+        },
+      })
+    end,
+  },
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 

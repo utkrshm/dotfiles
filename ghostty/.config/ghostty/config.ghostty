@@ -28,5 +28,15 @@ keybind = ctrl+shift+r=new_split:right
 keybind = ctrl+shift+e=unbind
 keybind = ctrl+shift+o=unbind
 
+# Use Shift+Alt+(arrow keys) for resizing panes (consistent with tmux config)
+# Resize splits by 20 cells
+keybind = shift+alt+left=resize_split:left,20
+keybind = shift+alt+right=resize_split:right,20
+keybind = shift+alt+up=resize_split:up,20
+keybind = shift+alt+down=resize_split:down,20
+
+# Use Ctrl+Alt+(arrow keys) for moving between panes in the same tab
+# Use Ctrl+Shift+(arrow keys) for moving between tabs
+
 # These are the specific configuration files; will be loaded at the end of the current file, so please keep them at the end only.
 

@@ -8,7 +8,7 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { desc = "Save file in Interactive mode" })
-map({"i"}, "<C-q>", "<cmd> q <cr>", { desc = "Quit buffer in the Interactive view" })
+map({ "i", "n" }, "<C-q>", "<cmd> q <cr>", { desc = "Quit buffer in the Interactive view" })
 map({ "i" }, "<C-z>", "<ESC>u", { desc = "Undo in Interactive mode" })
 
 map({"n", "i"}, "<C-y>", "<cmd>redo<CR>", { desc = "Redo in Interactive mode" })
@@ -20,11 +20,12 @@ map("v", "<C-c>", '"+y', { desc = "Works in Visual mode; copies to system clipbo
 map("i", "<C-v>", '<C-r>+', { desc = "Works in Interactive mode; pastes from the system clipboard" })
 
 map("v", "<C-x>", '"+d', { desc = "Works in Visual mode; cuts to the system clipboard" })
+-- map("v", "<leader>i", "inoremap <key> <Esc>i", { desc = "Move from Visual mode to Interactive mode" })
+map("i", "C-k", "<Plug>(nvim.lsp.ctrl-s)", { desc = "Use Ctrl+K to cycle between function signatures in your LSP" })
 
 -- If I want to map Ctrl+Backspace to delete word, I have to map the Esc-BS key to Ctrl+w because 
 -- I remap Ctrl+BS to Esc+BS for Emacs compatibility, to achieve the functionality in Ghostty ZSH
-vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true, silent = true })
-vim.keymap.set("n", "<M-BS>", "<C-w>", { noremap = true, silent = true })
+vim.keymap.set({ "i", "n" }, "<M-BS>", "<C-w>", { noremap = true, silent = true })
 
 -- Use Shift + Arrow keys to move the selection
 map("n", "<S-Up>", "v<Up>")

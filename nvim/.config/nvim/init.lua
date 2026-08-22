@@ -45,4 +45,3 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.cmd("wincmd p")
   end,
 })
-
