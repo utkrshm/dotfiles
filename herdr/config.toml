@@ -1,0 +1,18 @@
+onboarding = false
+
+[theme]
+name = "tokyo-night"
+auto_switch = false
+
+[ui.toast]
+delivery = "system"
+
+[ui]
+status_indicators = "dots"
+
+[keys]
+# Change prefix to Ctrl+Space to be synced with tmux
+prefix = "ctrl+space"
+
+
+
