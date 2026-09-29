@@ -160,3 +160,5 @@ source /usr/share/doc/fzf/examples/completion.zsh
 
 # Added by Antigravity CLI installer
 export PATH="/home/utkarsh/.local/bin:$PATH"
+
+export PATH="/tmp/opencode/as-bin:$PATH"

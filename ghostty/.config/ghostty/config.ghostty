@@ -2,6 +2,7 @@
 # shell-integration = bash
 shell-integration = zsh
 copy-on-select = clipboard
+clipboard-paste-protection = false
 
 notify-on-command-finish = unfocused
 notify-on-command-finish-action = notify
@@ -28,6 +29,10 @@ keybind = ctrl+shift+r=new_split:right
 keybind = ctrl+shift+e=unbind
 keybind = ctrl+shift+o=unbind
 
+# Ctrl+F for full screen
+keybind = ctrl+f=toggle_fullscreen
+keybind = ctrl+enter=unbind   
+
 # Use Shift+Alt+(arrow keys) for resizing panes (consistent with tmux config)
 # Resize splits by 20 cells
 keybind = shift+alt+left=resize_split:left,20
@@ -37,6 +42,25 @@ keybind = shift+alt+down=resize_split:down,20
 
 # Use Ctrl+Alt+(arrow keys) for moving between panes in the same tab
 # Use Ctrl+Shift+(arrow keys) for moving between tabs
+
+# Add VIM Navigation using a key table; Alt+V starts the navigation mode, pressing Esc/Q/I exits it
+# Activate the "vim" key table (modal mode)
+keybind = alt+v=activate_key_table:vim
+
+# Define the key table bindings
+keybind = vim/j=scroll_page_lines:1
+keybind = vim/k=scroll_page_lines:-1
+keybind = vim/ctrl+d=scroll_page_down
+keybind = vim/ctrl+u=scroll_page_up
+keybind = vim/g>g=scroll_to_top
+keybind = vim/shift+g=scroll_to_bottom
+keybind = vim/v=copy_to_clipboard
+keybind = vim/y=copy_to_clipboard
+
+# Exit Vim mode
+keybind = vim/escape=deactivate_key_table
+keybind = vim/q=deactivate_key_table
+keybind = vim/i=deactivate_key_table   
 
 # These are the specific configuration files; will be loaded at the end of the current file, so please keep them at the end only.
 

@@ -1,0 +1,15 @@
+claude/.claude/*.json
+claude/.claude/history.jsonl
+claude/.claude/.*
+claude/.claude/backups/
+claude/.claude/cache/
+claude/.claude/file-history/
+claude/.claude/paste-cache/
+claude/.claude/plans/
+claude/.claude/projects/
+claude/.claude/plugins/
+claude/.claude/session-env/
+claude/.claude/shell-snapshots/
+claude/.claude/state/
+claude/.claude/telemetry/
+

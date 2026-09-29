@@ -159,5 +159,11 @@ mkcd() {
     mkdir -p -- "$1" && cd -- "$1"
 }
 
+update() {
+   sudo apt update -y && sudo apt upgrade -y
+}
+
 # Git aliases
 # coa = add all changes, and commit them
+
+export PATH="/home/utkarsh/.pixi/bin:$PATH"
